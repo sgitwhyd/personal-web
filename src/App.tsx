@@ -1,7 +1,6 @@
 import './App.css';
 import { Route, Routes } from 'react-router-dom';
 import Layout from './pages/layout/layout.component';
-import { GlobalRoute } from './routes/route';
 import Home from './pages/home/home.component';
 import Project from './pages/project/project.component';
 import NotFoundPage from './pages/not-found-page/not-found-page.component';
