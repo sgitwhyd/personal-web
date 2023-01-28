@@ -1,0 +1,9 @@
+.button {
+	opacity: 0;
+	filter: alpha(opacity=0);
+}
+
+.card-image:hover .button {
+	opacity: 1;
+	filter: alpha(opacity=100);
+}
