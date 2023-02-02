@@ -1,5 +1,8 @@
-import Hero from '../../assets/hero.png';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faGithub } from '@fortawesome/free-brands-svg-icons';
 import './card.styles.css';
+
+import { Link } from 'react-router-dom';
 
 const CardButton = ({ color }: any) => {
 	return (
@@ -13,16 +16,20 @@ const CardButton = ({ color }: any) => {
 const randomColor = ['green', 'yellow', 'red'];
 
 const Card = (props: any) => {
-	const { title, image, summary, tags } = props;
+	const { title, image, summary, tags, link, demoLink, index } = props;
 
 	const getRandomColor = () => {
-		return `bg-${
-			randomColor[Math.floor(Math.random() * randomColor.length)]
-		}-600`;
+		return `${randomColor[Math.floor(Math.random() * randomColor.length)]}-600`;
 	};
 
 	return (
-		<div className='min-h-max w-full rounded-lg bg-slate-900 dark:bg-slate-800'>
+		<div
+			className='min-h-max w-full rounded-lg bg-slate-900 dark:bg-slate-800'
+			data-aos='zoom-in'
+			data-aos-delay={`${index}00`}
+			data-aos-duration={`1000'`}
+			data-aos-easing='ease-in-out'
+			data-aos-once='false'>
 			<div className='flex  items-center p-[9px]'>
 				<CardButton color=' bg-red-600' />
 				<CardButton color=' bg-yellow-600' />
@@ -30,22 +37,41 @@ const Card = (props: any) => {
 			</div>
 			<div className='overflow-hidden text-white'>
 				<div className='relative'>
-					<div className='button absolute right-0 bottom-0 z-10 overflow-hidden'>
-						show code
+					<div className='absolute inset-0 z-10 flex flex-col items-center justify-center bg-black bg-opacity-50 text-center opacity-0 duration-300 hover:opacity-100'>
+						<a
+							href={demoLink}
+							className=' text-lg font-bold text-white'
+							target='_blank'
+							rel='noopener noreferrer'>
+							Demo
+						</a>
 					</div>
 					<img
-						src={'https://picsum.photos/200/300'}
-						className='card-image mb-2 block h-48 w-full object-cover transition duration-300 ease-in-out hover:scale-110 hover:backdrop-grayscale'
+						src={image}
+						className='card-image mb-2 block h-36 w-full object-cover transition duration-300 ease-in-out hover:scale-110 hover:backdrop-grayscale'
 						alt=''
 					/>
 				</div>
 				<div className='p-2.5'>
-					<h3 className='text-xl font-medium'>{title}</h3>
-					<p className='text-md mt-3 h-14'>{summary}</p>
-					<div className='mt-5 flex flex-wrap justify-between justify-items-center gap-2'>
-						{tags.map((tag: any) => (
+					<div className='min-h-[120px] w-fit'>
+						<div className='flex items-center justify-between'>
+							<h3 className='text-xl font-bold'>{title}</h3>
+							<a
+								href={link}
+								target='_blank'
+								className='hover:text-pink-300 hover:transition-all'>
+								<FontAwesomeIcon icon={faGithub} />
+							</a>
+						</div>
+						<p className='mt-3 text-sm font-normal text-gray-400 dark:text-gray-200'>
+							{summary}
+						</p>
+					</div>
+					<div className='mt-8 flex  flex-wrap justify-items-center gap-2 '>
+						{tags.map((tag: any, index: number) => (
 							<p
-								className={` w-fit rounded-lg  ${getRandomColor()} py-2 px-3 text-xs`}>
+								key={index}
+								className={` hitespace-nowrap rounded-full bg-gradient-to-r  from-pink-500 to-cyan-500 px-2 py-1 text-[.7rem] text-white shadow-sm`}>
 								{tag}
 							</p>
 						))}
