@@ -1,4 +1,3 @@
-import { Link } from 'react-router-dom';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
 import { SosialLinks } from '../../data/sosial-link.data';
@@ -9,9 +8,9 @@ const SocialLink = () => {
 			<div className=' flex h-[200px] flex-col justify-evenly md:justify-between'>
 				{SosialLinks.map((item, index) => {
 					return (
-						<Link
+						<a
 							key={index}
-							to={item.link}
+							href={item.link}
 							target='_blank'
 							className='scale-[0.8] duration-150 ease-in-out hover:scale-100 dark:text-white'>
 							<FontAwesomeIcon
@@ -21,7 +20,7 @@ const SocialLink = () => {
 								data-aos-delay={`${index}00`}
 								data-aos-duration='1000'
 							/>
-						</Link>
+						</a>
 					);
 				})}
 			</div>

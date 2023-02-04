@@ -9,13 +9,13 @@ import {
 
 const Experience = () => {
 	return (
-		<div className='my-5 dark:text-white md:mt-36'>
+		<div className='z-[1] my-5 overflow-hidden dark:text-white md:mt-36'>
 			<h1 className=' text-xl font-bold md:text-3xl ' data-aos='fade-right'>
 				Works
 			</h1>
 			<div className='relative mt-5 md:mt-8'>
 				<div
-					className='absolute left-5 h-full border-4 border-slate-900 dark:border-white md:left-10'
+					className='absolute left-5 h-full rounded-md border-4 border-slate-900 dark:border-white md:left-10 '
 					data-aos='fade-right'
 					data-aos-duration='1000'></div>
 				<ul>
@@ -31,9 +31,10 @@ const Experience = () => {
 									data-aos='fade-left'
 									data-aos-duration='1000'
 									data-aos-delay={`${index + 2}00`}>
-									<h5 className='text-xl font-bold md:text-2xl'>
+									<h2 className='text-xl font-bold md:text-2xl'>
 										{experience.title}
-									</h5>
+									</h2>
+									<p className='text-sm'>{experience.type}</p>
 									<p className='text-sm'>{experience.date}</p>
 									<p className='mt-4 text-xs md:text-base'>
 										{experience.summary}
@@ -49,7 +50,7 @@ const Experience = () => {
 			<h1
 				className='mt-8 text-end text-xl font-bold md:text-3xl'
 				data-aos='fade-left'>
-				Achievement
+				Achievements
 			</h1>
 			<ul className='ml-2 mt-5 md:ml-6'>
 				{achievement.map((item, index) => (
@@ -60,7 +61,7 @@ const Experience = () => {
 						data-aos-delay={`${index + 2}00`}
 						data-aos-duration='1000'>
 						<FontAwesomeIcon size='2xl' icon={faTrophy} />
-						<h5 className='text-xs md:text-lg'>{item.title}</h5>
+						<h2 className='text-xs md:text-lg'>{item.title}</h2>
 					</li>
 				))}
 			</ul>
@@ -79,7 +80,7 @@ const Experience = () => {
 						data-aos-delay={`${index + 2}00`}
 						data-aos-duration='1000'>
 						<FontAwesomeIcon size='2xl' icon={faBullseye} />
-						<h5 className='text-sm md:text-lg'>{item.title}</h5>
+						<h2 className='text-sm md:text-lg'>{item.title}</h2>
 					</li>
 				))}
 			</ul>

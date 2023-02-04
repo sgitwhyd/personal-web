@@ -1,29 +1,25 @@
 import {
 	faGithubAlt,
-	faFacebookSquare,
 	faInstagram,
 	faLinkedin,
+	faTelegram,
 } from '@fortawesome/free-brands-svg-icons';
 
 export const SosialLinks = [
 	{
-		name: 'GithubIcon',
 		icon: faGithubAlt,
-		link: '',
+		link: 'https://github.com/sgitwhyd',
 	},
 	{
-		name: 'FacebookIcon',
-		icon: faFacebookSquare,
-		link: '',
+		icon: faTelegram,
+		link: 'https://t.me/sgitwhyd',
 	},
 	{
-		name: 'InstagramIcon',
 		icon: faInstagram,
-		link: '',
+		link: 'https://instagram.com/sigtwhyu',
 	},
 	{
-		name: 'LinkedinIcon',
 		icon: faLinkedin,
-		link: '',
+		link: 'https://www.linkedin.com/in/sigit-wahyudi/',
 	},
 ];

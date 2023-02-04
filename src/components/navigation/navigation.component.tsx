@@ -48,7 +48,7 @@ const Navigation = () => {
 				<div className='container mx-auto flex w-full items-center  justify-between px-4 md:w-[900px]'>
 					<div className='text-2xl font-medium '>
 						<Link to={'/'}>
-							<strong>Git</strong>hub
+							<strong>Sigit</strong>Whyd
 						</Link>
 					</div>
 					<div className=' hidden w-80 items-center justify-between  md:flex'>

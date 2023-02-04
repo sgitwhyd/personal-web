@@ -18,10 +18,6 @@ const randomColor = ['green', 'yellow', 'red'];
 const Card = (props: any) => {
 	const { title, image, summary, tags, link, demoLink, index } = props;
 
-	const getRandomColor = () => {
-		return `${randomColor[Math.floor(Math.random() * randomColor.length)]}-600`;
-	};
-
 	return (
 		<div
 			className='min-h-max w-full rounded-lg bg-slate-900 dark:bg-slate-800'
@@ -49,16 +45,17 @@ const Card = (props: any) => {
 					<img
 						src={image}
 						className='card-image mb-2 block h-36 w-full object-cover transition duration-300 ease-in-out hover:scale-110 hover:backdrop-grayscale'
-						alt=''
+						alt={title}
 					/>
 				</div>
 				<div className='p-2.5'>
-					<div className='min-h-[120px] w-fit'>
+					<div className='min-h-[120px] w-full'>
 						<div className='flex items-center justify-between'>
 							<h3 className='text-xl font-bold'>{title}</h3>
 							<a
 								href={link}
 								target='_blank'
+								aria-label={`link for ${title}`}
 								className='hover:text-pink-300 hover:transition-all'>
 								<FontAwesomeIcon icon={faGithub} />
 							</a>

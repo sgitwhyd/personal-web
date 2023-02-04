@@ -2,6 +2,9 @@ import AbinawaImage from '../assets/projects/abinawa.png';
 import ShopcutImage from '../assets/projects/shopcut.png';
 import CrwnaImage from '../assets/projects/crwn-cloth.png';
 import DigipackImage from '../assets/projects/digipack.png';
+import RestoImage from '../assets/projects/restoku.png';
+import NotesImage from '../assets/projects/notes.png';
+import lantai16Image from '../assets/projects/lantai16.png';
 
 export const listProject = [
 	{
@@ -38,5 +41,21 @@ export const listProject = [
 		demoLink: 'https://digipack-final.netlify.app',
 		summary: 'one of the projects when I was a freelance UI engineer',
 		tags: ['Netlify', 'Responsive', 'Swiper'],
+	},
+	{
+		title: 'Notes',
+		image: NotesImage,
+		link: 'https://github.com/sgitwhyd/react-notes-app.git',
+		demoLink: 'https://notes-app-sigit.netlify.app',
+		summary: 'this is my submission for dicoding class',
+		tags: ['ReactJs', 'TailwindCss', 'localStorage'],
+	},
+	{
+		title: 'Lantai 16',
+		image: lantai16Image,
+		link: 'https://github.com/sgitwhyd/lantai16.git',
+		demoLink: 'https://lantai16.netlify.app/',
+		summary: "One of figma's slicing ui customers",
+		tags: ['SwiperJs', 'Netlify', 'Responsive'],
 	},
 ];

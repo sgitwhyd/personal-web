@@ -1,11 +1,16 @@
 import { Link } from 'react-router-dom';
 
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faChevronCircleDown } from '@fortawesome/free-solid-svg-icons';
+import {
+	faChevronCircleDown,
+	faArrowUpRightFromSquare,
+} from '@fortawesome/free-solid-svg-icons';
 
 import { SosialLinks } from '../../data/sosial-link.data';
+import { skills, tools } from '../../data/experience.data';
 
-import Hero from '../../assets/hero.png';
+import Hero from '../../assets/hero.jpg';
+import myResume from '../../assets/sigitwahyudi_resume.pdf';
 
 const Home = () => {
 	return (
@@ -16,16 +21,18 @@ const Home = () => {
 					data-aos='fade-right'
 					data-aos-anchor='#image-hero'
 					data-aos-offset='300'
+					data-aos-duration='600'
 					data-aos-easing='ease-in-sine'>
 					<h1 className='text-lg font-bold leading-snug md:text-2xl'>
 						<i>Hello</i>,👋 I'm Sigit
 					</h1>
-					<h3 className='text-xl font-bold md:text-3xl'>Software Developer</h3>
+					<h2 className='text-xl font-bold md:text-3xl'>Software Developer</h2>
 					<p className='mt-5 text-xs font-medium  tracking-[1.3px] md:text-base'>
-						Hello my name is<strong> Sigit Wahyudi</strong>,I am an informatics
-						engineering student at Muhammadiyah University of Surakarta. I like
-						challenges and learn new things. now I focus on{' '}
-						<i>web development</i> and already have 3 years experience
+						Hello, I'm <strong>Sigit Wahyudi</strong>, a student of the
+						Informatics Study Program at the Muhammadiyah University of
+						Surakarta. I like programming since 2nd grade of high school until
+						now I have been studying web programming for more than 3 years and
+						now I am focusing on developing web using JavaScript language.
 					</p>
 					<div className=' mt-5 flex justify-evenly md:hidden'>
 						{SosialLinks.map((item, index) => {
@@ -53,25 +60,83 @@ const Home = () => {
 					<img
 						src={Hero}
 						alt='profile img'
-						className='w-96'
+						width={280}
+						height={280}
 						data-aos='zoom-in-up'
 						data-aos-offset='300'
+						data-aos-duration='600'
 						data-aos-easing='ease-in-sine'
 					/>
-					<button
-						className='contact-me mt-5'
+					<a
+						href={myResume}
+						target='_blank'
+						aria-label='download resume'
+						className='bg- mt-5 rounded-sm border-2 border-slate-900 py-3 text-center text-lg text-slate-900 shadow-[8px_8px_0px_0px_#000000] transition-all  hover:shadow-[0_0_#000000] dark:border-white dark:bg-slate-900  dark:text-white dark:shadow-[8px_8px_0px_0px_#ffffff] dark:hover:shadow-[0_0_#ffffff]'
 						data-aos='fade-left'
+						data-aos-duration='600'
 						data-aos-easing='ease-in-sine'>
-						Contact Me{' '}
-					</button>
+						Get My Resume
+						<FontAwesomeIcon
+							className='ml-5'
+							size='sm'
+							icon={faArrowUpRightFromSquare}
+						/>
+					</a>
 				</div>
 			</div>
-			<a href='#skill' className='flex animate-bounce justify-center'>
+			<a
+				href='#skill'
+				aria-label='anchor scroll down'
+				className=' flex animate-bounce justify-center'>
 				<FontAwesomeIcon size='2xl' icon={faChevronCircleDown} />
 			</a>
 
 			<div id='skill'>
-				<h1 className='mt-5 text-3xl font-bold dark:text-white'>Skills</h1>
+				<h1 className='mt-5 text-center text-3xl font-bold dark:text-white'>
+					Skills
+				</h1>
+
+				<div className='mt-8 flex flex-wrap justify-center gap-10'>
+					{skills.map((skill, index) => (
+						<div
+							key={index}
+							data-aos='zoom-in'
+							data-aos-delay={`${index}00`}
+							data-aos-duration='500'
+							data-aos-offset='100'
+							data-aos-easing='ease-in-out'
+							data-aos-once='false'>
+							<div className='flex flex-col items-center px-2 py-4 transition-all hover:-translate-y-2'>
+								<i className={`${skill.icon} text-6xl`} />
+								<p className='mt-3 text-sm font-bold'>{skill.title}</p>
+							</div>
+						</div>
+					))}
+				</div>
+			</div>
+
+			<div id='tools'>
+				<h1 className='mt-5 text-center text-3xl font-bold dark:text-white'>
+					Tools
+				</h1>
+
+				<div className='mt-8 flex  flex-wrap justify-center gap-10'>
+					{tools.map((tool, index) => (
+						<div
+							key={index}
+							data-aos='zoom-in'
+							data-aos-delay={`${index}00`}
+							data-aos-duration='500'
+							data-aos-offset='100'
+							data-aos-easing='ease-in-out'
+							data-aos-once='false'>
+							<div className='flex flex-col items-center px-2 py-4 transition-all hover:-translate-y-2'>
+								<i className={`${tool.icon} text-6xl`} />
+								<p className='mt-3 text-sm font-bold'>{tool.title}</p>
+							</div>
+						</div>
+					))}
+				</div>
 			</div>
 		</div>
 	);
