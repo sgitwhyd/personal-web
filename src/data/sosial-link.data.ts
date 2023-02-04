@@ -4,6 +4,7 @@ import {
 	faLinkedin,
 	faTelegram,
 } from '@fortawesome/free-brands-svg-icons';
+import { faEnvelope } from '@fortawesome/free-solid-svg-icons';
 
 export const SosialLinks = [
 	{
@@ -21,5 +22,9 @@ export const SosialLinks = [
 	{
 		icon: faLinkedin,
 		link: 'https://www.linkedin.com/in/sigit-wahyudi/',
+	},
+	{
+		icon: faEnvelope,
+		link: 'mailto:sigitwahyu.mutu@gmail.com',
 	},
 ];

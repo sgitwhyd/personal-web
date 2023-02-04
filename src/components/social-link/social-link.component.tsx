@@ -5,7 +5,7 @@ import { SosialLinks } from '../../data/sosial-link.data';
 const SocialLink = () => {
 	return (
 		<div className='hidden lg:fixed lg:left-8 lg:bottom-8 lg:block'>
-			<div className=' flex h-[200px] flex-col justify-evenly md:justify-between'>
+			<div className=' flex h-[250px] flex-col justify-evenly md:justify-between'>
 				{SosialLinks.map((item, index) => {
 					return (
 						<a

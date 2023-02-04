@@ -5,7 +5,10 @@ import { faSun } from '@fortawesome/free-solid-svg-icons';
 import { faMoon } from '@fortawesome/free-regular-svg-icons';
 
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faArrowUpRightFromSquare } from '@fortawesome/free-solid-svg-icons';
 import { useTheme } from '../theme/theme.context';
+
+import myResume from '../../assets/sigitwahyudi_resume.pdf';
 
 const ButtonDrawerMobile = ({ navlinks }: any) => {
 	const [modalVisible, setModalVisible] = useState(false);
@@ -59,7 +62,7 @@ const ButtonDrawerMobile = ({ navlinks }: any) => {
 			</div>
 			{/* content will be popup */}
 			<div
-				className={`fixed bottom-0 z-10 h-full  max-h-[200px] w-full translate-y-full rounded-t-xl bg-white duration-500 ease-in-out dark:bg-slate-800 ${
+				className={`fixed bottom-0 z-10 h-full  max-h-[230px] w-full translate-y-full rounded-t-xl bg-white duration-500 ease-in-out dark:bg-slate-800 ${
 					modalVisible ? 'translate-y-0' : ''
 				}`}>
 				<div className='flex h-full w-full flex-col items-center justify-center text-slate-900 dark:text-white'>
@@ -70,6 +73,18 @@ const ButtonDrawerMobile = ({ navlinks }: any) => {
 							</Link>
 						);
 					})}
+					<a
+						href={myResume}
+						target='_blank'
+						aria-label='download resume'
+						className='mx-3  py-3 px-4 text-center text-base font-semibold text-slate-900 dark:border-white dark:text-white'>
+						Get Resume
+						<FontAwesomeIcon
+							className='ml-5'
+							size='sm'
+							icon={faArrowUpRightFromSquare}
+						/>
+					</a>
 				</div>
 			</div>
 		</div>
