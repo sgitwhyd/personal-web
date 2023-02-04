@@ -40,9 +40,9 @@ const Home = () => {
 						<div className=' mt-5 flex justify-evenly md:hidden'>
 							{SosialLinks.map((item, index) => {
 								return (
-									<Link
+									<a
 										key={index}
-										to={item.link}
+										href={item.link}
 										target='_blank'
 										className='scale-[0.8] duration-150 ease-in-out hover:scale-100 dark:text-white'>
 										<FontAwesomeIcon
@@ -52,7 +52,7 @@ const Home = () => {
 											data-aos-delay={`${index}00`}
 											data-aos-duration='1000'
 										/>
-									</Link>
+									</a>
 								);
 							})}
 						</div>
