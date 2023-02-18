@@ -58,4 +58,13 @@ export const listProject = [
 		summary: "One of figma's slicing ui customers",
 		tags: ['SwiperJs', 'Netlify', 'Responsive'],
 	},
+	{
+		title: 'Open Requirement HIMATIF',
+		image: '',
+		link: 'https://github.com/sgitwhyd/Laravel-Himatif.git',
+		demoLink: '',
+		summary:
+			'This is an open source project that I created to simplify the registration system for organizations using a website',
+		tags: ['Laravel', 'Tailwind', 'Mysql'],
+	},
 ];

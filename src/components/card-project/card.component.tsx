@@ -2,8 +2,6 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faGithub } from '@fortawesome/free-brands-svg-icons';
 import './card.styles.css';
 
-import { Link } from 'react-router-dom';
-
 const CardButton = ({ color }: any) => {
 	return (
 		<div className='py-0  px-1'>
@@ -12,8 +10,6 @@ const CardButton = ({ color }: any) => {
 		</div>
 	);
 };
-
-const randomColor = ['green', 'yellow', 'red'];
 
 const Card = (props: any) => {
 	const { title, image, summary, tags, link, demoLink, index } = props;
@@ -43,7 +39,7 @@ const Card = (props: any) => {
 						</a>
 					</div>
 					<img
-						src={image}
+						src={image ? image : 'https://picsum.photos/200/300'}
 						className='card-image mb-2 block h-36 w-full object-cover transition duration-300 ease-in-out hover:scale-110 hover:backdrop-grayscale'
 						alt={title}
 					/>

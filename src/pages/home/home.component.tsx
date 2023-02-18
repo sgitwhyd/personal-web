@@ -1,5 +1,3 @@
-import { Link } from 'react-router-dom';
-
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import {
 	faChevronCircleDown,
@@ -74,10 +72,7 @@ const Home = () => {
 							href={myResume}
 							target='_blank'
 							aria-label='download resume'
-							className='bg- mt-5 rounded-sm border-2 border-slate-900 py-3 text-center text-lg text-slate-900 shadow-[8px_8px_0px_0px_#000000] transition-all  hover:shadow-[0_0_#000000] dark:border-white dark:bg-slate-900  dark:text-white dark:shadow-[8px_8px_0px_0px_#ffffff] dark:hover:shadow-[0_0_#ffffff]'
-							data-aos='fade-left'
-							data-aos-duration='600'
-							data-aos-easing='ease-in-sine'>
+							className='mt-5 rounded-sm border-2  border-slate-900 py-3 text-center text-lg text-slate-900 shadow-[8px_8px_0px_0px_#000000] transition-all hover:shadow-[0_0_#000000]  hover:transition-all dark:border-white dark:bg-slate-900  dark:text-white dark:shadow-[8px_8px_0px_0px_#ffffff] dark:hover:shadow-[0_0_#ffffff]'>
 							Get Resume
 							<FontAwesomeIcon
 								className='ml-5'
