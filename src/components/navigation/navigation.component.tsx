@@ -1,25 +1,30 @@
-import ButtonDrawerMobile from '../navigation-mobile/navigation-mobile.component';
-import Toggle from '../toggle/toggle.component';
+import ButtonDrawerMobile from "../navigation-mobile/navigation-mobile.component";
+import Toggle from "../toggle/toggle.component";
 
-import { Link, useLocation } from 'react-router-dom';
-import { useEffect, useState } from 'react';
+import { Link, useLocation } from "react-router-dom";
+import { useEffect, useState, FC } from "react";
 
-const Navlinks = [
+export type NavLinkProps = {
+	name: string;
+	path: string;
+};
+
+const Navlinks: NavLinkProps[] = [
 	{
-		name: 'Home',
-		path: '/',
+		name: "Home",
+		path: "/",
 	},
 	{
-		name: 'Project',
-		path: '/project',
+		name: "Projects",
+		path: "/projects",
 	},
 	{
-		name: 'Experience',
-		path: '/experience',
+		name: "Experience",
+		path: "/experience",
 	},
 ];
 
-const Navigation = () => {
+const Navigation: FC = () => {
 	const [scrollPosition, setScrollPosition] = useState(0);
 	const { pathname } = useLocation();
 
@@ -28,10 +33,10 @@ const Navigation = () => {
 			setScrollPosition(window.pageYOffset);
 		}
 
-		window.addEventListener('scroll', handleScroll);
+		window.addEventListener("scroll", handleScroll);
 
 		return () => {
-			window.removeEventListener('scroll', handleScroll);
+			window.removeEventListener("scroll", handleScroll);
 		};
 	}, []);
 
@@ -40,14 +45,14 @@ const Navigation = () => {
 			<nav
 				className={`fixed z-10 hidden w-full items-center border-b border-gray-200 py-5 md:block md:backdrop-blur ${
 					scrollPosition > 46
-						? pathname === '/experience'
-							? 'text-dark dark:text-white'
-							: 'text-white'
-						: 'text-black dark:text-white'
+						? pathname === "/experience"
+							? "text-dark dark:text-white"
+							: "text-white"
+						: "text-black dark:text-white"
 				}`}>
 				<div className='container mx-auto flex w-full items-center  justify-between px-4 md:w-[900px]'>
 					<div className='text-2xl font-medium '>
-						<Link to={'/'}>
+						<Link to={"/"}>
 							<strong>Sigit</strong>Whyd
 						</Link>
 					</div>
@@ -57,7 +62,7 @@ const Navigation = () => {
 								<Link
 									key={index}
 									className={`text-base font-semibold ${
-										index === 0 ? 'hidden' : ''
+										index === 0 ? "hidden" : ""
 									}`}
 									to={link.path}>
 									{link.name}

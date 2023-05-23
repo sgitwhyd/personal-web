@@ -1,16 +1,22 @@
-import { useState } from 'react';
-import { Link } from 'react-router-dom';
+import { useState, FC } from "react";
+import { Link } from "react-router-dom";
 
-import { faSun } from '@fortawesome/free-solid-svg-icons';
-import { faMoon } from '@fortawesome/free-regular-svg-icons';
+import { faSun } from "@fortawesome/free-solid-svg-icons";
+import { faMoon } from "@fortawesome/free-regular-svg-icons";
 
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faArrowUpRightFromSquare } from '@fortawesome/free-solid-svg-icons';
-import { useTheme } from '../theme/theme.context';
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faArrowUpRightFromSquare } from "@fortawesome/free-solid-svg-icons";
+import { useTheme } from "../theme/theme.context";
 
-import myResume from '../../assets/sigitwahyudi_resume.pdf';
+import { NavLinkProps } from "../navigation/navigation.component";
 
-const ButtonDrawerMobile = ({ navlinks }: any) => {
+import myResume from "../../assets/sigitwahyudi_resume.pdf";
+
+type ButtonDrawerMobileProps = {
+	navlinks: NavLinkProps[];
+};
+
+const ButtonDrawerMobile: FC<ButtonDrawerMobileProps> = ({ navlinks }) => {
 	const [modalVisible, setModalVisible] = useState(false);
 	const { theme, themeToggleHandler } = useTheme();
 
@@ -19,8 +25,8 @@ const ButtonDrawerMobile = ({ navlinks }: any) => {
 			<div
 				className={`fixed top-0 z-10 min-h-screen w-full transition duration-300 ease-in-out ${
 					modalVisible
-						? ' block bg-gray-900 opacity-30'
-						: 'z-10 hidden opacity-0'
+						? " block bg-gray-900 opacity-30"
+						: "z-10 hidden opacity-0"
 				}`}
 				onClick={() => {
 					if (modalVisible) {
@@ -31,7 +37,7 @@ const ButtonDrawerMobile = ({ navlinks }: any) => {
 				<button
 					className='h-10 w-10 rounded-lg bg-slate-200'
 					onClick={themeToggleHandler}>
-					{theme === 'dark' ? (
+					{theme === "dark" ? (
 						<FontAwesomeIcon
 							size='xl'
 							className='text-pink-500'
@@ -51,7 +57,7 @@ const ButtonDrawerMobile = ({ navlinks }: any) => {
 						e.preventDefault();
 						setModalVisible((prev) => !prev);
 					}}>
-					{' '}
+					{" "}
 					<label className='menuButton'>
 						<input id='check' type='checkbox' />
 						<span className='top'></span>
@@ -63,10 +69,10 @@ const ButtonDrawerMobile = ({ navlinks }: any) => {
 			{/* content will be popup */}
 			<div
 				className={`fixed bottom-0 z-10 h-full  max-h-[230px] w-full translate-y-full rounded-t-xl bg-white duration-500 ease-in-out dark:bg-slate-800 ${
-					modalVisible ? 'translate-y-0' : ''
+					modalVisible ? "translate-y-0" : ""
 				}`}>
 				<div className='flex h-full w-full flex-col items-center justify-center text-slate-900 dark:text-white'>
-					{navlinks.map((link: any, index: any) => {
+					{navlinks.map((link, index) => {
 						return (
 							<Link key={index} className='my-3 font-semibold' to={link.path}>
 								{link.name}

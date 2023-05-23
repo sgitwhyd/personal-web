@@ -1,6 +1,7 @@
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faGithub } from '@fortawesome/free-brands-svg-icons';
-import './card.styles.css';
+import { FC } from "react";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faGithub } from "@fortawesome/free-brands-svg-icons";
+import "./card.styles.css";
 
 const CardButton = ({ color }: any) => {
 	return (
@@ -11,9 +12,25 @@ const CardButton = ({ color }: any) => {
 	);
 };
 
-const Card = (props: any) => {
-	const { title, image, summary, tags, link, demoLink, index } = props;
+type CardProps = {
+	title: string;
+	image: string;
+	summary: string;
+	tags: string[];
+	link: string;
+	demoLink: string;
+	index: number;
+};
 
+const Card: FC<CardProps> = ({
+	title,
+	image,
+	summary,
+	tags,
+	link,
+	demoLink,
+	index,
+}) => {
 	return (
 		<div
 			className='min-h-max w-full rounded-lg bg-slate-900 dark:bg-slate-800'
@@ -39,7 +56,7 @@ const Card = (props: any) => {
 						</a>
 					</div>
 					<img
-						src={image ? image : 'https://picsum.photos/200/300'}
+						src={image ? image : "https://picsum.photos/200/300"}
 						className='card-image mb-2 block h-36 w-full object-cover transition duration-300 ease-in-out hover:scale-110 hover:backdrop-grayscale'
 						alt={title}
 					/>

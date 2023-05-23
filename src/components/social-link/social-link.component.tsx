@@ -1,8 +1,10 @@
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
-import { SosialLinks } from '../../data/sosial-link.data';
+import { SosialLinks } from "../../data/sosial-link.data";
 
-const SocialLink = () => {
+import { FC } from "react";
+
+const SocialLink: FC = () => {
 	return (
 		<div className='hidden lg:fixed lg:left-8 lg:bottom-8 lg:block'>
 			<div className=' flex h-[250px] flex-col justify-evenly md:justify-between'>

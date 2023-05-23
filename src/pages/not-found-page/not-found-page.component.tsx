@@ -1,12 +1,12 @@
-import { Link, useNavigate } from 'react-router-dom';
+import { useNavigate } from "react-router-dom";
 
 const NotFoundPage = () => {
 	const navigate = useNavigate();
 	return (
-		<div className='flex flex-col items-center justify-center dark:text-white'>
+		<div className='flex h-screen flex-col items-center justify-center dark:text-white'>
 			Your search Not Found
 			<button
-				className='border border-black p-1.5 text-base'
+				className='mt-5 rounded-md border border-black bg-blue-400 p-1.5 text-base'
 				onClick={(e) => {
 					e.preventDefault();
 					navigate(-1);

@@ -1,10 +1,10 @@
-import Card from '../../components/card-project/card.component';
-import { listProject } from '../../data/projects.data';
+import Card from "../../components/card-project/card.component";
+import { listProject } from "../../data/projects.data";
 
 const Project = () => {
 	return (
 		<div className='mt-5 mb-14 grid grid-cols-1 justify-items-center gap-3 md:mt-32 md:grid-cols-3 md:gap-5'>
-			{listProject.map((data: any, index: Number) => {
+			{listProject.map((data, index) => {
 				return <Card key={index} index={index} {...data} />;
 			})}
 		</div>

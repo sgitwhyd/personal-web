@@ -1,14 +1,13 @@
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
 	faChevronCircleDown,
 	faArrowUpRightFromSquare,
-} from '@fortawesome/free-solid-svg-icons';
+} from "@fortawesome/free-solid-svg-icons";
 
-import { SosialLinks } from '../../data/sosial-link.data';
-import { skills, tools } from '../../data/experience.data';
+import { SosialLinks } from "@/data/sosial-link.data";
+import { skills, tools } from "@/data/experience.data";
 
-import Hero from '../../assets/hero.jpg';
-import myResume from '../../assets/sigitwahyudi_resume.pdf';
+import Hero from "@/assets/hero.jpg";
 
 const Home = () => {
 	return (
@@ -28,12 +27,14 @@ const Home = () => {
 						<h2 className='text-xl font-bold md:text-3xl'>
 							Software Developer
 						</h2>
-						<p className='mt-5 text-xs font-medium  tracking-[1.3px] md:text-base'>
-							Hello, I'm <strong>Sigit Wahyudi</strong>, a student of the
-							Informatics Study Program at the Muhammadiyah University of
-							Surakarta. I like programming since 2nd grade of high school until
-							now I have been studying web programming for more than 3 years and
-							now I am focusing on developing web using JavaScript language.
+						<p className='mt-5 text-[10px] font-medium  tracking-[1.3px] md:text-base'>
+							I spent most of my time playing with codes over 3 years, trying to
+							get to that one to the final boss stage, but.. I don't think this
+							game will have a final stage because it's always being updated. My
+							role is in Web Development, equipped with Front-End as well as
+							Back-End. I used TypeScript, React and Next JS to build Frontend
+							and NodeJs with a MySQL relational database using Sequelize ORM to
+							build Backend.
 						</p>
 						<div className=' mt-5 flex justify-evenly md:hidden'>
 							{SosialLinks.map((item, index) => {
@@ -67,9 +68,10 @@ const Home = () => {
 							data-aos-offset='300'
 							data-aos-duration='600'
 							data-aos-easing='ease-in-sine'
+							className='-skew-y-6 rounded-md shadow-[8px_8px_0px_0px_#000000] dark:shadow-[8px_8px_0px_0px_#ffffff]'
 						/>
 						<a
-							href={myResume}
+							href='https://drive.google.com/file/d/1gb6k7wQg4Mzx6B2Mkxk67l-2unIB8FiF/view?usp=share_link'
 							target='_blank'
 							aria-label='download resume'
 							className='mt-5 rounded-sm border-2  border-slate-900 py-3 text-center text-lg text-slate-900 shadow-[8px_8px_0px_0px_#000000] transition-all hover:shadow-[0_0_#000000]  hover:transition-all dark:border-white dark:bg-slate-900  dark:text-white dark:shadow-[8px_8px_0px_0px_#ffffff] dark:hover:shadow-[0_0_#ffffff]'>

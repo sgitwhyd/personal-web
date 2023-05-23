@@ -1,11 +1,11 @@
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faTrophy, faBullseye } from '@fortawesome/free-solid-svg-icons';
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faTrophy, faBullseye } from "@fortawesome/free-solid-svg-icons";
 
 import {
 	achievement,
 	experiences,
 	organizations,
-} from '../../data/experience.data';
+} from "../../data/experience.data";
 
 const Experience = () => {
 	return (
@@ -79,8 +79,13 @@ const Experience = () => {
 						data-aos='fade-left'
 						data-aos-delay={`${index + 2}00`}
 						data-aos-duration='1000'>
-						<FontAwesomeIcon size='2xl' icon={faBullseye} />
-						<h2 className='text-sm md:text-lg'>{item.title}</h2>
+						<div className='flex justify-center space-x-6'>
+							<FontAwesomeIcon size='2xl' icon={faBullseye} />
+							<div className=''>
+								<h2 className='text-sm md:text-lg'>{item.title}</h2>
+								<p>{item.desc}</p>
+							</div>
+						</div>
 					</li>
 				))}
 			</ul>
