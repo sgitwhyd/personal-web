@@ -3,8 +3,9 @@ import ShopcutImage from "../assets/projects/shopcut.png";
 import CrwnaImage from "../assets/projects/crwn-cloth.png";
 import DigipackImage from "../assets/projects/digipack.png";
 import NotesImage from "../assets/projects/notes.png";
-import lantai16Image from "../assets/projects/lantai16.png";
+import PaygameImage from "../assets/projects/paygame.png";
 import RestokuImage from "../assets/projects/restoku.png";
+import Pokeapp from "../assets/projects/pokeapp.png";
 
 type ProjectProps = {
 	title: string;
@@ -17,22 +18,13 @@ type ProjectProps = {
 
 export const listProject: ProjectProps[] = [
 	{
-		title: "Abinawa",
-		image: AbinawaImage,
-		link: "https://github.com/sgitwhyd/abinawa.git",
-		demoLink: "https://abinawa.vercel.app",
+		title: "Pokeapp",
+		image: Pokeapp,
+		link: "https://github.com/sgitwhyd/pokeapp-graphql.git",
+		demoLink: "https://sigit-pokeapp.netlify.app/",
 		summary:
-			"This is a 3D wayang information web that I made with my group for the Student Creativity Program (PKM).",
-		tags: ["TailwindCss", "Spline"],
-	},
-	{
-		title: "Shopcut",
-		image: ShopcutImage,
-		link: "https://github.com/sgitwhyd/tailwind-shopcut.git",
-		demoLink: "https://shopcut.netlify.app",
-		summary:
-			"I made this to learn nextjs, rest API and react context and as a final project.",
-		tags: ["TailwindCss", "FakeStoreApi", "ReactJs"],
+			"Website infomation about pokemon, I using https://graphql-pokeapi.graphcdn.app/ for the API.",
+		tags: ["graphql", "ReactJs", "MUI", "TailwindCss"],
 	},
 	{
 		title: "Crown Clothing",
@@ -42,6 +34,15 @@ export const listProject: ProjectProps[] = [
 		summary:
 			"Learning outcomes react, redux, styled component, firebase, and react router dom.",
 		tags: ["Redux", "Firebase", "styled component", "React Router Dom"],
+	},
+	{
+		title: "Game Store Website",
+		image: PaygameImage,
+		link: "https://github.com/sgitwhyd/gamepay-native.git",
+		demoLink: "https://paygame.netlify.app/",
+		summary:
+			"Result of slicing from figma design, I made this for my client from fastwork.id",
+		tags: ["HTML", "Javascript", "SASS", "Responsive"],
 	},
 	{
 		title: "Digipack",
@@ -60,23 +61,7 @@ export const listProject: ProjectProps[] = [
 			"The noted application is made using react js which I made for my final assignment in the class '	Belajar Membuat Aplikasi Web dengan React'",
 		tags: ["ReactJs", "TailwindCss", "localStorage"],
 	},
-	{
-		title: "Lantai 16",
-		image: lantai16Image,
-		link: "https://github.com/sgitwhyd/lantai16.git",
-		demoLink: "https://lantai16.netlify.app/",
-		summary: "One of figma's slicing ui customers",
-		tags: ["SwiperJs", "Netlify", "Responsive", "HTML & CSS"],
-	},
-	{
-		title: "Open Requirement HIMATIF",
-		image: "",
-		link: "https://github.com/sgitwhyd/Laravel-Himatif.git",
-		demoLink: "",
-		summary:
-			"This is an open source project that I created to simplify the registration system for organizations using a website",
-		tags: ["Laravel", "Tailwind", "Mysql"],
-	},
+
 	{
 		title: "RestoKu Apps",
 		image: RestokuImage,
@@ -85,5 +70,24 @@ export const listProject: ProjectProps[] = [
 		summary:
 			"Catalogue of food and beverage menus that I made for the final project of the web programming course",
 		tags: ["e2e", "Testing", "Webpack", "Eslint", "PWA"],
+	},
+
+	{
+		title: "Shopcut",
+		image: ShopcutImage,
+		link: "https://github.com/sgitwhyd/tailwind-shopcut.git",
+		demoLink: "https://shopcut.netlify.app",
+		summary:
+			"I made this to learn nextjs, rest API and react context and as a final project.",
+		tags: ["TailwindCss", "FakeStoreApi", "ReactJs"],
+	},
+	{
+		title: "Abinawa",
+		image: AbinawaImage,
+		link: "https://github.com/sgitwhyd/abinawa.git",
+		demoLink: "https://abinawa.vercel.app",
+		summary:
+			"This is a 3D wayang information web that I made with my group for the Student Creativity Program (PKM).",
+		tags: ["TailwindCss", "Spline"],
 	},
 ];
