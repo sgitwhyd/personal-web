@@ -10,8 +10,6 @@ import { useTheme } from "../theme/theme.context";
 
 import { NavLinkProps } from "../navigation/navigation.component";
 
-import myResume from "../../assets/sigitwahyudi_resume.pdf";
-
 type ButtonDrawerMobileProps = {
 	navlinks: NavLinkProps[];
 };
@@ -80,7 +78,7 @@ const ButtonDrawerMobile: FC<ButtonDrawerMobileProps> = ({ navlinks }) => {
 						);
 					})}
 					<a
-						href={myResume}
+						href='https://drive.google.com/file/d/1gb6k7wQg4Mzx6B2Mkxk67l-2unIB8FiF/view?usp=share_link'
 						target='_blank'
 						aria-label='download resume'
 						className='mx-3  py-3 px-4 text-center text-base font-semibold text-slate-900 dark:border-white dark:text-white'>
