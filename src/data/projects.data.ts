@@ -4,6 +4,7 @@ import CrwnaImage from "../assets/projects/crwn-cloth.png";
 import DigipackImage from "../assets/projects/digipack.png";
 import NotesImage from "../assets/projects/notes.png";
 import lantai16Image from "../assets/projects/lantai16.png";
+import RestokuImage from "../assets/projects/restoku.png";
 
 type ProjectProps = {
 	title: string;
@@ -47,7 +48,7 @@ export const listProject: ProjectProps[] = [
 		image: DigipackImage,
 		link: "https://github.com/sgitwhyd/digipack-final.git",
 		demoLink: "https://digipack-final.netlify.app",
-		summary: "one of the projects when I was a freelance UI engineer",
+		summary: "Website for selling and ordering food packaging.",
 		tags: ["Netlify", "Responsive", "Swiper"],
 	},
 	{
@@ -55,7 +56,8 @@ export const listProject: ProjectProps[] = [
 		image: NotesImage,
 		link: "https://github.com/sgitwhyd/react-notes-app.git",
 		demoLink: "https://notes-app-sigit.netlify.app",
-		summary: "this is my submission for dicoding class",
+		summary:
+			"The noted application is made using react js which I made for my final assignment in the class '	Belajar Membuat Aplikasi Web dengan React'",
 		tags: ["ReactJs", "TailwindCss", "localStorage"],
 	},
 	{
@@ -64,7 +66,7 @@ export const listProject: ProjectProps[] = [
 		link: "https://github.com/sgitwhyd/lantai16.git",
 		demoLink: "https://lantai16.netlify.app/",
 		summary: "One of figma's slicing ui customers",
-		tags: ["SwiperJs", "Netlify", "Responsive"],
+		tags: ["SwiperJs", "Netlify", "Responsive", "HTML & CSS"],
 	},
 	{
 		title: "Open Requirement HIMATIF",
@@ -74,5 +76,14 @@ export const listProject: ProjectProps[] = [
 		summary:
 			"This is an open source project that I created to simplify the registration system for organizations using a website",
 		tags: ["Laravel", "Tailwind", "Mysql"],
+	},
+	{
+		title: "RestoKu Apps",
+		image: RestokuImage,
+		link: "https://github.com/sgitwhyd/Restoku-MFWDE.git",
+		demoLink: "https://restoku-mfwde.vercel.app/",
+		summary:
+			"Catalogue of food and beverage menus that I made for the final project of the web programming course",
+		tags: ["e2e", "Testing", "Webpack", "Eslint", "PWA"],
 	},
 ];
