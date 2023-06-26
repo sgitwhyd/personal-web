@@ -46,18 +46,20 @@ const Card: FC<CardProps> = ({
 			</div>
 			<div className='overflow-hidden text-white'>
 				<div className='relative'>
-					<div className='absolute inset-0 z-10 flex flex-col items-center justify-center bg-black bg-opacity-50 text-center opacity-0 duration-300 hover:opacity-100'>
-						<a
-							href={demoLink}
-							className=' text-lg font-bold text-white'
-							target='_blank'
-							rel='noopener noreferrer'>
-							Demo
-						</a>
-					</div>
+					{demoLink && (
+						<div className='absolute inset-0 z-10 flex flex-col items-center justify-center bg-black bg-opacity-50 text-center opacity-0 duration-300 hover:opacity-100'>
+							<a
+								href={demoLink}
+								className=' text-lg font-bold text-white'
+								target='_blank'
+								rel='noopener noreferrer'>
+								View
+							</a>
+						</div>
+					)}
 					<img
 						src={image ? image : "https://picsum.photos/200/300"}
-						className='card-image mb-2 block h-36 w-full object-cover transition duration-300 ease-in-out hover:scale-110 hover:backdrop-grayscale'
+						className='card-image mb-2 block h-48 w-full object-cover transition duration-300 ease-in-out hover:scale-110 hover:backdrop-grayscale'
 						alt={title}
 					/>
 				</div>
@@ -73,7 +75,7 @@ const Card: FC<CardProps> = ({
 								<FontAwesomeIcon icon={faGithub} />
 							</a>
 						</div>
-						<p className='mt-3 text-sm font-normal text-gray-400 dark:text-gray-200'>
+						<p className='text-md mt-3 font-normal text-gray-400 dark:text-gray-200'>
 							{summary}
 						</p>
 					</div>
@@ -81,7 +83,7 @@ const Card: FC<CardProps> = ({
 						{tags.map((tag: any, index: number) => (
 							<p
 								key={index}
-								className={` hitespace-nowrap rounded-full bg-gradient-to-r  from-pink-500 to-cyan-500 px-2 py-1 text-[.7rem] text-white shadow-sm`}>
+								className={` hitespace-nowrap rounded-lg bg-gradient-to-r  from-pink-500 to-cyan-500 px-2 py-1 text-[.7rem] text-white shadow-sm`}>
 								{tag}
 							</p>
 						))}
